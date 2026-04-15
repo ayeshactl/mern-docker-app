@@ -41,6 +41,6 @@ app.put("/toggle/:id", async (req, res) => {
   res.json(todo);
 });
 
-app.listen(3000, () => {
+app.listen(3000, '0.0.0.0', () => {
   console.log("Backend running");
 });
