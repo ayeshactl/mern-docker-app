@@ -1,0 +1,34 @@
+version: "3.8"
+
+services:
+  mongo:
+    image: mongo
+    container_name: mongo
+    ports:
+      - "27017:27017"
+    networks:
+      - mern-net
+
+  backend:
+    build: ./backend
+    container_name: backend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - mongo
+    networks:
+      - mern-net
+
+  frontend:
+    build: ./frontend
+    container_name: frontend
+    ports:
+      - "3001:3000"
+    depends_on:
+      - backend
+    networks:
+      - mern-net
+
+networks:
+  mern-net:
+    driver: bridge
