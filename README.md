@@ -33,3 +33,20 @@ A full-stack Todo application built using MERN stack and deployed using modern t
 ```bash
 docker build -t todo-app .
 docker run -p 3000:3000 todo-app
+
+
+🚀 Deployment
+Frontend → Vercel
+Backend → Railway
+Database → MongoDB Atlas
+📚 Learning
+
+This project helped me understand:
+
+Docker containerization
+Full-stack deployment
+API communication
+Environment variables in production
+
+📌 Author
+Ayesha*
